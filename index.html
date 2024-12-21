@@ -14,7 +14,7 @@
       <div class="logo w-[100px]"><img src="assets/Logo.png" alt="logo"></div>
       <div>
         <label class="input input-bordered flex items-center gap-2">
-          <input type="text" class="grow" placeholder="Search" />
+          <input id="search" type="text" class="grow" placeholder="Search" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
@@ -28,7 +28,7 @@
         </label>
       </div>
       <div>
-        <button class="btn bg-green-500 hover:bg-cyan-400 ">Sort</button>
+        <button class="btn hidden md:inline-block bg-green-500 hover:bg-cyan-400 ">Sort</button>
       </div>
     </nav>
     <section id="category-Container" class="flex gap-5 justify-center p-5"> </section>
@@ -37,6 +37,22 @@
   <main class="w-11/12 mx-auto">
     <section id="videoSectionContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"></section>
   </main>
+
+  <!-- Open the modal using ID.showModal() method -->
+<button id="showModalData" class="btn hidden" onclick="displayModal.showModal()">open modal</button>
+<dialog id="displayModal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div class="modalContent">
+      <h3>O dhorjer karone dynamic kori nai</h3>
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
   <footer>
     
